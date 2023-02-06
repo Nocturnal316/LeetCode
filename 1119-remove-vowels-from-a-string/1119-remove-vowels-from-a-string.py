@@ -3,6 +3,6 @@ class Solution:
         vowels = {'a','e','i','o', 'u'}
         ans = []
         for letter in s:
-            if not letter in vowels:
+            if letter not in 'aeiou':
                 ans.append(letter)
         return ''.join(ans)
