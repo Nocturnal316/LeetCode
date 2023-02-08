@@ -6,7 +6,6 @@ class Solution {
         for(String string : strs){
             char[] temp = string.toCharArray();
             Arrays.sort(temp);
-            System.out.println(String.valueOf(temp));
             String sortedWord =  String.valueOf(temp);
             if(!map.containsKey(sortedWord)){
                 map.put(sortedWord,new ArrayList());
