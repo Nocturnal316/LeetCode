@@ -12,11 +12,15 @@ class Solution {
         
         Queue<Integer> que = 
             new PriorityQueue<>((a,b)->
-            Integer.compare(counterMap.get(b),counterMap.get(a)));
+            Integer.compare(counterMap.get(a),counterMap.get(b)));
         
         
-        que.addAll(counterMap.keySet());
+        //que.addAll(counterMap.keySet());
         
+        for(Integer a : counterMap.keySet()){
+            que.add(a);
+            if(que.size() > k) que.poll();
+        }
         int[] ans = new int[k];
         
         for(int i = 0; i < k;i++){
