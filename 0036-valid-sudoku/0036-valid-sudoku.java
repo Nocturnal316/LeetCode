@@ -5,7 +5,7 @@ class Solution {
         for(int row = 0; row < m; row++){
             HashSet<Character> seen = new HashSet<>();
             for(int col = 0; col < m; col++){
-                  char c = board[row][col];
+                char c = board[row][col];
                 if(!Character.isDigit(c)) continue;
                 if( seen.contains(c)) return false;
                 seen.add(c);
@@ -33,7 +33,6 @@ class Solution {
                 }
             }
         }
-        
         
         return true;
     }
