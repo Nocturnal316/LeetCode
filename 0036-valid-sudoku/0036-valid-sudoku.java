@@ -5,18 +5,20 @@ class Solution {
         for(int row = 0; row < m; row++){
             HashSet<Character> seen = new HashSet<>();
             for(int col = 0; col < m; col++){
-                if(!Character.isDigit(board[row][col])) continue;
-                if( seen.contains(board[row][col])) return false;
-                seen.add(board[row][col]);
+                  char c = board[row][col];
+                if(!Character.isDigit(c)) continue;
+                if( seen.contains(c)) return false;
+                seen.add(c);
             }
         }
         
         for(int row = 0; row < m; row++){
             HashSet<Character> seen = new HashSet<>();
             for(int col = 0; col < m; col++){
-                if(!Character.isDigit(board[col][row])) continue;
-                if( seen.contains(board[col][row])) return false;
-                seen.add(board[col][row]);
+                char c = board[col][row];
+                if(!Character.isDigit(c)) continue;
+                if( seen.contains(c)) return false;
+                seen.add(c);
             }
         }
         
@@ -28,7 +30,6 @@ class Solution {
                     if(!Character.isDigit(c)) continue;
                     if( seen.contains(c)) return false;
                     seen.add(c);
-                    
                 }
             }
         }
