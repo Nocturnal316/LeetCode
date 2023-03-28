@@ -11,6 +11,6 @@ class Solution {
             
         }
         
-        return set.iterator().next();
+        return set.stream().findFirst().get();
     }
 }
