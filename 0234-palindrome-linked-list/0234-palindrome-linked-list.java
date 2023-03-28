@@ -25,6 +25,6 @@ class Solution {
             front = front.next;
         }
         
-        return stack.isEmpty() == true;
+        return stack.isEmpty();
     }
 }
