@@ -33,11 +33,11 @@ class LRUCache {
     public void put(int key, int value) {
         Node node = map.get(key);
         if(node == null){
-            Node newNode = new Node();
-            newNode.key = key;
-            newNode.val = value;
-            map.put(key,newNode);
-            addNode(newNode);
+             node = new Node();
+            node.key = key;
+            node.val = value;
+            map.put(key,node);
+            addNode(node);
             size+=1;
             if(size > cap){
                 Node n =  tail.prev;
