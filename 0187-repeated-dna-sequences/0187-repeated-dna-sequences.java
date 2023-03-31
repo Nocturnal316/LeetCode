@@ -3,11 +3,9 @@ class Solution {
         HashSet<String> set = new HashSet<>();
         HashSet<String> ans = new HashSet<>();
         StringBuilder sb = new StringBuilder();
-        int l =0;
         
-        
-        for(int r = 0; r < s.length();r++){
-            sb.append(s.charAt(r));
+        for(char c : s.toCharArray()){
+            sb.append(c);
             if(sb.length() == 10 ){
                 String dna = sb.toString();
                 if(set.contains(dna)){
