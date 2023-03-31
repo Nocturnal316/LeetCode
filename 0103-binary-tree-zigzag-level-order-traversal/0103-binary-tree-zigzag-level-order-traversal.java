@@ -1,24 +1,55 @@
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
 class Solution {
-    public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
-        List<List<Integer>> output = new ArrayList<>();
-        zigzagOrderHelper(output, root, 0);
-        return output;
-    }
+    List<List<Integer>> ans;
+//     public void  helper(TreeNode root, boolean goRight,ArrayList<Integer> levelList,int level){
+//         if(root == null) return;
+        
+//         if(goRight){
+//             helper(root.left,false);
+//             helper(root.right,false);
+//         }else{
+//             helper(root.right,true);
+//             helper(root.left,true);
+//         }
+//    }
     
-    public void zigzagOrderHelper(List<List<Integer>> output, TreeNode root, int level) {
-        if(root == null){
-            return;
-        } else {
-            if(level >= output.size()){
-                 output.add(new ArrayList<>());
+    public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
+        ans = new ArrayList<>();
+        if(root==null) return ans;
+        int level = 0;
+        Queue<TreeNode> q = new LinkedList<>();
+        q.offer(root);
+        while(!q.isEmpty()){
+            
+            int size = q.size();
+            ArrayList<Integer> newList = new ArrayList<>();
+           
+            for(int i = 0; i < size;i++){
+                TreeNode  node = q.poll();
+                if(node.left != null) q.offer(node.left);
+                if(node.right != null) q.offer(node.right);
+                newList.add(node.val);
             }
-            if(level % 2 == 0){
-                output.get(level).add(root.val);
-            } else {
-                output.get(level).add(0, root.val);
+            if(level%2 != 0){
+                Collections.reverse(newList);
             }
-            zigzagOrderHelper(output, root.left, level + 1);
-            zigzagOrderHelper(output, root.right, level + 1);
+            ans.add(newList);
+            level++;
         }
+        return ans;
     }
 }
