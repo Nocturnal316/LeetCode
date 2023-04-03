@@ -7,7 +7,7 @@ class Solution {
         int right = row*col-1;
         
         while(left <= right){
-            int mid = left+(right-left)/2;
+            int mid = (left+right)/2;
            
             int num = matrix[mid/col][mid%col];
           
