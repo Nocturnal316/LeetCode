@@ -6,10 +6,6 @@ class Solution {
             this.sum = sum;
             this.close = close;
         }
-        
-        public String toString(){
-            return "sum "+ sum + "target "+ close;
-        }
     }
     
     public int threeSumClosest(int[] nums, int target) {
@@ -29,15 +25,12 @@ class Solution {
                     return target;
                 }else if(sum < target){
                     left++;
-                    
                     queue.offer(new Pair(sum,(target - sum)));
                 }else{
                     right--;
                     queue.offer(new Pair(sum,(sum - target)));
                 }
-
-            }
-            
+            } 
         }
         return queue.poll().sum;
     }
