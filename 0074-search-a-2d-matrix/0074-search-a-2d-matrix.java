@@ -10,7 +10,7 @@ class Solution {
             int mid = left+(right-left)/2;
            
             int num = matrix[mid/col][mid%col];
-            System.out.println(num);
+          
             if(num == target){
                 return true;
             }else if(num > target){
