@@ -69,7 +69,8 @@ class Solution {
         board[i][j] =  ' ';
        
         TrieNode child = root.children.get(temp);
-        if(dfs(child,board,i+1,j)||dfs(child,board,i-1,j)||dfs(child,board,i,j+1)||dfs(child,board,i,j-1)) return true;
+        if(dfs(child,board,i+1,j)||dfs(child,board,i-1,j)
+           ||dfs(child,board,i,j+1)||dfs(child,board,i,j-1)) return true;
         board[i][j]=temp;
         
         return false;
