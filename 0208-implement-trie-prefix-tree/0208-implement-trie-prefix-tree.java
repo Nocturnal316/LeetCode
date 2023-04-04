@@ -37,7 +37,6 @@ class Trie {
         }
         
         String subString = word.substring(1);
-        
         insertHelper(subString,child);
     }
     
@@ -47,8 +46,9 @@ class Trie {
     }
     
     public boolean searchHelper(String word,TrieNode root){
-        if(word.length() == 0 && root != null) return root.isWord;
         if(root == null) return false;
+        if(word.length() == 0) return root.isWord;
+       
         return searchHelper(word.substring(1),
                             root.children.getOrDefault(word.charAt(0),null));
     }
@@ -80,6 +80,7 @@ class Trie {
         if(!parent.children.containsKey(c)){
             parent.children.put(c,child);
         }
+        
         String subString = word.substring(1);
         
         insertHelper(subString,child);
