@@ -48,7 +48,6 @@ class Trie {
     public boolean searchHelper(String word,TrieNode root){
         if(root == null) return false;
         if(word.length() == 0) return root.isWord;
-       
         return searchHelper(word.substring(1),
                             root.children.getOrDefault(word.charAt(0),null));
     }
@@ -61,7 +60,6 @@ class Trie {
     public boolean startHelper(String word,TrieNode root){
         if(root == null) return false;
         if(word.length() == 0) return root.children.size() > 0 || root.isWord;
-        
         return startHelper(word.substring(1),
                             root.children.getOrDefault(word.charAt(0),null));
     }
@@ -82,7 +80,6 @@ class Trie {
         }
         
         String subString = word.substring(1);
-        
         insertHelper(subString,child);
     }
 }
