@@ -41,7 +41,7 @@ class Solution {
         }
         
          if (currNode.children.isEmpty()) {
-             node.children.remove(letter);
+             
              return;
          }
         
