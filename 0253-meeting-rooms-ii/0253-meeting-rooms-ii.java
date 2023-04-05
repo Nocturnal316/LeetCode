@@ -10,7 +10,6 @@ class Solution {
         }
         int cur=0;
         int ans=0;
-        System.out.println(destruct);
         
         for(Integer p : destruct.values()){
             cur += p;
