@@ -40,6 +40,11 @@ class Solution {
             currNode.word = null;
         }
         
+         if (currNode.children.isEmpty()) {
+             node.children.remove(letter);
+             return;
+         }
+        
         board[row][col] = ' ';
         //generate next valid moves
         //backtrack on those moves
