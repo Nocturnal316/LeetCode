@@ -40,9 +40,9 @@ class Solution {
             currNode.word = null;
         }
         
-         if (currNode.children.isEmpty()) {
-             node.children.remove(letter);
-             return;
+        if (currNode.children.isEmpty()) {
+            node.children.remove(letter);
+            return;
          }
         
         board[row][col] = ' ';
@@ -55,10 +55,8 @@ class Solution {
             if(currNode.children.containsKey(board[newRow][newCol])){
                 backTrack(currNode,newRow,newCol);
             }
-            
         }
         board[row][col] = letter;
-        
     }
     
     public List<String> findWords(char[][] board, String[] words) {
