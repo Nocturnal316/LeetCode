@@ -31,11 +31,6 @@ class Solution {
     }
    
     public void backTrack(TrieNode node,int row, int col){
-        
-          if (node.children.isEmpty()) {
-         
-             return;
-         }
       
         Character letter = board[row][col];
         TrieNode currNode = node.children.get(letter);
@@ -45,7 +40,10 @@ class Solution {
             currNode.word = null;
         }
         
-       
+         if (currNode.children.isEmpty()) {
+             node.children.remove(letter);
+             return;
+         }
         
         board[row][col] = ' ';
         //generate next valid moves
