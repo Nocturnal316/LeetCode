@@ -53,9 +53,7 @@ class Solution {
             
         }
         board[row][col] = letter;
-         if (currNode.children.isEmpty()) {
-             node.children.remove(letter);
-         }
+        
     }
     
     public List<String> findWords(char[][] board, String[] words) {
