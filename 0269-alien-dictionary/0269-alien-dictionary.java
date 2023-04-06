@@ -67,20 +67,13 @@ class Solution {
             
             GraphNode curNode = dict.get(curChar);
             ans.append(curChar);
-            System.out.println(curChar);
-            if(curChar == 'c') System.out.println(curNode.adj);
+      
             for(Character childChar : curNode.adj.keySet()){
-                if(curChar == 'c') System.out.println(curNode.adj);
                 count.put(childChar,count.get(childChar) - 1);
                 if(count.get(childChar).equals(0)) queue.offer(childChar);
             }
-            
-        
         }
         
-        
-        System.out.println(count);
-        System.out.println(dict);
         //if(count.size() != 0) return "";
         if(ans.length() < count.size()) return "";
         
