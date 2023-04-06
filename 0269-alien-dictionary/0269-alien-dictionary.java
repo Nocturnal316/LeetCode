@@ -52,31 +52,22 @@ class Solution {
 
         Queue<Character> queue = new LinkedList<>();
         for(Character c : count.keySet()){
-            if(count.get(c).equals(0)){
-               queue.add(c); 
-            } 
+            if(count.get(c).equals(0))queue.add(c); 
         }
         
         Character curChar;
-        
         StringBuilder ans = new StringBuilder();
         while(!queue.isEmpty()){
             curChar = queue.poll();
-            
             GraphNode curNode = dict.get(curChar);
             ans.append(curChar);
-      
             for(Character childChar : curNode.adj.keySet()){
                 count.put(childChar,count.get(childChar) - 1);
                 if(count.get(childChar).equals(0)) queue.offer(childChar);
             }
-            
         }
         
-        //if(count.size() != 0) return "";
         if(ans.length() < count.size()) return "";
-        
         return ans.toString();
-        
     }
 }
