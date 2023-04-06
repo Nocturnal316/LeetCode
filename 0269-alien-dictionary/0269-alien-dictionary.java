@@ -41,12 +41,14 @@ class Solution {
                 if(word1.charAt(j) != word2.charAt(j)){
                     Character c1 = word1.charAt(j);
                     Character c2 = word2.charAt(j);
+                    //avoid the b2 problem
+                    //ac ab then zc zb
+                    //because not using arraylist map will only have b once
                     if(dict.get(c1).adj.containsKey(c2))break;
                     dict.get(c1).adj.put(c2,dict.get(c2));
                     count.put(c2,count.get(c2)+1);
                     break;//break
                 }
-              
             }
         }
 
