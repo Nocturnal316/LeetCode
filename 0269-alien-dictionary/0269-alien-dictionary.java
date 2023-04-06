@@ -58,8 +58,6 @@ class Solution {
         }
         
         Character curChar;
-        System.out.println(count);
-        System.out.println(dict);
         
         StringBuilder ans = new StringBuilder();
         while(!queue.isEmpty()){
