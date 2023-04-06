@@ -70,6 +70,7 @@ class Solution {
                 count.put(childChar,count.get(childChar) - 1);
                 if(count.get(childChar).equals(0)) queue.offer(childChar);
             }
+            
         }
         
         //if(count.size() != 0) return "";
