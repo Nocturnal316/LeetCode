@@ -22,7 +22,7 @@ class Solution {
         int level = 1;
        
         while(!queue.isEmpty()){
-            System.out.println(queue);
+          
             int size = queue.size();
             for(int i = 0; i < size;i++){
                int stop = queue.poll();
@@ -31,7 +31,7 @@ class Solution {
                     seenRoutes.add(bus);
                     for(Integer busStops: routes[bus]){
                         if(seenStops.contains(busStops))continue;
-                        System.out.println(busStops+", level"+level );
+                  
                         seenStops.add(busStops);
                         if(target ==  busStops) return level;
                         queue.add(busStops);
