@@ -22,7 +22,6 @@ class Solution {
         int level = 1;
        
         while(!queue.isEmpty()){
-          
             int size = queue.size();
             for(int i = 0; i < size;i++){
                int stop = queue.poll();
@@ -31,13 +30,11 @@ class Solution {
                     seenRoutes.add(bus);
                     for(Integer busStops: routes[bus]){
                         if(seenStops.contains(busStops))continue;
-                  
                         seenStops.add(busStops);
                         if(target ==  busStops) return level;
                         queue.add(busStops);
                     }
                 }
-                
             }
             level+=1;
         }
