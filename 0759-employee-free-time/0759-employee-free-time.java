@@ -35,8 +35,6 @@ class Solution {
         
         PriorityQueue<Interval> queue = new PriorityQueue<>((a,b)->(a.start-b.start));
         
-        int sum = 0;
-        
         for(List<Interval> intervals : schedule){
             for(Interval interval : intervals){
                 queue.offer(interval);   
@@ -48,7 +46,7 @@ class Solution {
         while(!queue.isEmpty()){
             Interval interval = queue.poll();
             //System.out.println(interval.start +"," +interval.end);
-            if(interval.start > prev){
+            if(prev < interval.start){
                 res.add( new Interval(prev,interval.start));
             }
             prev = Math.max(prev, interval.end);
