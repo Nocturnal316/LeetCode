@@ -52,7 +52,6 @@ class Solution {
                 res.add( new Interval(prev,interval.start));
             }
             prev = Math.max(prev, interval.end);
-          
         }
         return res;
     }
