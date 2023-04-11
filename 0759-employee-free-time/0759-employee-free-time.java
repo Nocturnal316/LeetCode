@@ -47,7 +47,7 @@ class Solution {
         
         while(!queue.isEmpty()){
             Interval interval = queue.poll();
-            System.out.println(interval.start +"," +interval.end);
+            //System.out.println(interval.start +"," +interval.end);
             if(interval.start > prev){
                 res.add( new Interval(prev,interval.start));
             }
