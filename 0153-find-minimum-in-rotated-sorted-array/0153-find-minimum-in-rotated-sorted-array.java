@@ -14,7 +14,7 @@ class Solution {
             }
         }
         
-        return Math.min(nums[lo],nums[hi]);
+        return nums[lo];
         
     }
 }
