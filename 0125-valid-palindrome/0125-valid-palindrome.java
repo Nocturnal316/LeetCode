@@ -1,8 +1,8 @@
 class Solution {
     public boolean isPalindrome(String s) {
+        if(s.isEmpty()) return true;
         String lower = s.toLowerCase();
         char[] chars = lower.toCharArray();
-        
         int left = 0;
         int right = chars.length-1;
         while(left < right){
@@ -12,7 +12,6 @@ class Solution {
             left++;
             right--;
         }
-        
         return true ;
     }
 }
