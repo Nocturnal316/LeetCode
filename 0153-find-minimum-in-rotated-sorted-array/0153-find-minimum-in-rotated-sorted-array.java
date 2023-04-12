@@ -1,9 +1,7 @@
 class Solution {
     public int findMin(int[] nums) {
-        
         int lo = 0;
         int hi = nums.length-1;
-        int ans;
         while(lo < hi){
             int mid = lo + (hi-lo) /2;
             if(nums[mid] > nums[hi]){
@@ -12,7 +10,6 @@ class Solution {
                 hi = mid;
             }
         }
-        
         return nums[lo];
         
     }
