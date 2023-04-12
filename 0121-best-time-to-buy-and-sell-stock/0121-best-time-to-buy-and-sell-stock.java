@@ -10,9 +10,10 @@ class Solution {
             if(minVal > prices[i]){
                 minVal = prices[i];
             }else{
-                maxVal = Math.max(maxVal,prices[i] - minVal);
+                maxVal = Math.max(dp[i-1],prices[i] - minVal);
             }
+            dp[i] = maxVal;
         }
-        return maxVal;
+        return dp[prices.length-1];
     }
 }
