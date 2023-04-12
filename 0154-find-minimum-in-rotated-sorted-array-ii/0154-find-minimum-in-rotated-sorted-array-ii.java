@@ -12,6 +12,6 @@ class Solution {
                 hi -=1;
             }
         }
-        return nums[hi];
+        return nums[lo];
     }
 }
