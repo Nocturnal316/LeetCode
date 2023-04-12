@@ -8,7 +8,6 @@ class Solution {
                 minVal = prices[i];
             }
             dp[i] = Math.max(dp[i-1],prices[i] - minVal);
-            
         }
         return dp[prices.length-1];
     }
