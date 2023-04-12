@@ -2,7 +2,7 @@ class Solution {
     public boolean isPalindrome(String s) {
         String lower = s.toLowerCase();
         char[] chars = lower.toCharArray();
-        if(lower.length() == 1) return true;
+        
         int left = 0;
         int right = chars.length-1;
         while(left < right){
