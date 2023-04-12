@@ -8,7 +8,7 @@ class Solution {
         while(left < right){
             while(left < right && !Character.isLetterOrDigit(chars[left])) left++;
             while(left < right && !Character.isLetterOrDigit(chars[right])) right--;
-            if(left > right || chars[left] != chars[right]) return false;
+            if(chars[left] != chars[right]) return false;
             left++;
             right--;
         }
