@@ -23,9 +23,7 @@ class Solution {
                 }
             }
             image[r][c] = color;
-            fillSeen[r][c] = true;
         }
         return image;
-        
     }
 }
