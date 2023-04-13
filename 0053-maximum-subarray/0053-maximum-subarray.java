@@ -10,9 +10,9 @@ class Solution {
 
         int max = Integer.MIN_VALUE;
         int min = 0;
-        System.out.println(Arrays.toString(prefix));
+       
         for(int i = 0;i < prefix.length;i++){
-            max = Math.max(max,prefix[i]-min);
+            max = Math.max(max,prefix[i]-min); 
             min = Math.min(min,prefix[i]);
         }
         
