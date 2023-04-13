@@ -10,9 +10,9 @@ class MinStack {
              stack.push(val);
              stack.push(val);
         }else{
-        int topMin = Math.min(stack.peek(),val);
-        stack.push(val);
-        stack.push(topMin);
+            int topMin = Math.min(stack.peek(),val);
+            stack.push(val);
+            stack.push(topMin);
         } 
     }
     
@@ -27,6 +27,7 @@ class MinStack {
         
         stack.push(top);
         stack.push(min);
+        
         return top;
     }
     
