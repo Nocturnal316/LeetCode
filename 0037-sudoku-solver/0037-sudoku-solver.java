@@ -39,8 +39,6 @@ class Solution {
                 seen.add(c);
             }
         }
-
-        
         return true;
     }
     
