@@ -10,31 +10,28 @@ class Solution {
      
     }
     
-     public boolean isValidSudoku(char[][] board) {
+     public boolean isValidSudoku(char[][] board, int rw, int cl) {
         int m = board.length;
         
+        HashSet<Character> seen = new HashSet<>();
+        for(int col = 0; col < m; col++){
+            char c = board[rw][col];
+            if(!Character.isDigit(c)) continue;
+            if( seen.contains(c)) return false;
+            seen.add(c);
+        }
+
+         seen = new HashSet<>();
         for(int row = 0; row < m; row++){
-            HashSet<Character> seen = new HashSet<>();
-            for(int col = 0; col < m; col++){
-                char c = board[row][col];
-                if(!Character.isDigit(c)) continue;
-                if( seen.contains(c)) return false;
-                seen.add(c);
-            }
+            char c = board[row][cl];
+            if(!Character.isDigit(c)) continue;
+            if( seen.contains(c)) return false;
+            seen.add(c);
         }
         
-        for(int row = 0; row < m; row++){
-            HashSet<Character> seen = new HashSet<>();
-            for(int col = 0; col < m; col++){
-                char c = board[col][row];
-                if(!Character.isDigit(c)) continue;
-                if( seen.contains(c)) return false;
-                seen.add(c);
-            }
-        }
         
        for (int box = 0; box < m; box++){
-             HashSet<Character> seen = new HashSet<>();
+             seen = new HashSet<>();
             for (int row = 0; row < 3; row++){
                 for (int col = 0; col < 3; col++){
                     char c = board[row + 3 * (box / 3)][col + 3 * (box % 3)];
@@ -57,7 +54,8 @@ class Solution {
         if(board[r][c] == '.'){
             for(int i = 1; i <= 9;i++){
                 board[r][c] =  (char)(i+ '0');
-                if(isValidSudoku(board) && solveBackTrack(board,r,c+1)) return true;
+                if(isValidSudoku(board,r,c) && 
+                   solveBackTrack(board,r,c+1)) return true;
             }
             board[r][c] = '.';
         }
