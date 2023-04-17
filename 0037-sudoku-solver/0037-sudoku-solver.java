@@ -52,10 +52,8 @@ class Solution {
         if(r == 9) return true;
         if(c == 9) return solveBackTrack(board,r+1,0);
         if(Character.getNumericValue(board[r][c]) != -1){
-            //System.out.println(Character.getNumericValue(board[r][c]));
             return solveBackTrack(board,r,c+1);
         }
-           
         if(board[r][c] == '.'){
             for(int i = 1; i <= 9;i++){
                 board[r][c] =  (char)(i+ '0');
