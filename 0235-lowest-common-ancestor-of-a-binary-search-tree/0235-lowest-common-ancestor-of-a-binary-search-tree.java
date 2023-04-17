@@ -29,7 +29,7 @@ class Solution {
             }else if(cur.val > p.val && cur.val > q.val){
                 cur = cur.left;
             }else{
-                return cur;
+                break;
             }
         }
         return cur;
