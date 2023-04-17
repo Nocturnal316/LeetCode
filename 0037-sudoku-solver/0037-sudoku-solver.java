@@ -29,18 +29,17 @@ class Solution {
             seen.add(c);
         }
         
-        
-       for (int box = 0; box < m; box++){
-             seen = new HashSet<>();
-            for (int row = 0; row < 3; row++){
-                for (int col = 0; col < 3; col++){
-                    char c = board[row + 3 * (box / 3)][col + 3 * (box % 3)];
-                    if(!Character.isDigit(c)) continue;
-                    if( seen.contains(c)) return false;
-                    seen.add(c);
-                }
+        int box = (rw / 3) * 3 + cl / 3;
+        seen = new HashSet<>();
+        for (int row = 0; row < 3; row++){
+            for (int col = 0; col < 3; col++){
+                char c = board[row + 3 * (box / 3)][col + 3 * (box % 3)];
+                if(!Character.isDigit(c)) continue;
+                if( seen.contains(c)) return false;
+                seen.add(c);
             }
         }
+
         
         return true;
     }
