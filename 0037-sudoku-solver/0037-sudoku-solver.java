@@ -1,11 +1,12 @@
 class Solution {
     
     public void solveSudoku(char[][] board) {
-        for(int i = 0; i < 9;i++){
-            for(int j = 0; j < 9; j++){
-                 solveBackTrack(board,i,j);
-            }
-        }
+        // for(int i = 0; i < 9;i++){
+        //     for(int j = 0; j < 9; j++){
+        //          solveBackTrack(board,i,j);
+        //     }
+        // }
+        solveBackTrack(board,0,0);
      
     }
     
@@ -48,8 +49,8 @@ class Solution {
     }
     
     public boolean solveBackTrack(char[][] board,int r, int c){
-        if(c == 9) return solveBackTrack(board,r+1,0);
         if(r == 9) return true;
+        if(c == 9) return solveBackTrack(board,r+1,0);
         if(Character.getNumericValue(board[r][c]) != -1){
             //System.out.println(Character.getNumericValue(board[r][c]));
             return solveBackTrack(board,r,c+1);
