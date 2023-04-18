@@ -24,10 +24,13 @@ class Solution {
             for(int cut = 1; cut < curWord.length();cut++){
                 String sub1 = revWord.substring(0,cut);
                 String sub2 = revWord.substring(cut);
+                //first half goes infront curword
+                // curword aba -> a ba - > ababa
                 if(isPali(sub2) && dict.containsKey(sub1)){
                     int pos = dict.get(sub1);
                     ans.add(Arrays.asList(pos,i));
                 }
+                //second half goes infront curWord
                 if(isPali(sub1) && dict.containsKey(sub2)){
                     int pos = dict.get(sub2);
                     ans.add(Arrays.asList(i,pos));
