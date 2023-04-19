@@ -11,7 +11,8 @@ class Solution {
     
     public boolean isSafe(boolean[][] board, int row, int col) {
       
-        //reason for not checking on right side of queen as we are not able to reaches there beacuse we are moving from backward whatever queen attack will be there it will be on left side
+        //reason for not checking on right side of queen as we are not able to reaches 
+        //there beacuse we are moving backward whatever queen attack will be there it will be on left side
         
         //on upper diagonal bothe col and row will decrease 
         // upward diagonal on left side 
@@ -50,7 +51,7 @@ class Solution {
                 curBoard[r][col] = false;
             }
         }
-        return;
+        
     }
     
     public void printBoard(boolean[][] board){
