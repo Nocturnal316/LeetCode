@@ -36,14 +36,12 @@ class Solution {
         }
         return true;
     }
-
     
     public void placeQueen(boolean[][] curBoard, int r){
         if(r == size){
             printBoard(curBoard);
             return;
         }
-        
         for(int col = 0; col < size; col++){
             if(isSafe(curBoard,r,col)){
                 curBoard[r][col] = true;
@@ -51,7 +49,6 @@ class Solution {
                 curBoard[r][col] = false;
             }
         }
-        
     }
     
     public void printBoard(boolean[][] board){
