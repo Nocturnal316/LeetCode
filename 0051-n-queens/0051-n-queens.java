@@ -68,7 +68,7 @@ class Solution {
             }
             temp.add(sb.toString());
         }
-        System.out.println(temp);
+        //System.out.println(temp);
         ans.add(temp);
     }
 }
