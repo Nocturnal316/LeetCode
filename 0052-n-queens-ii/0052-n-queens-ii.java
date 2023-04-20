@@ -53,21 +53,4 @@ class Solution {
         }
     }
     
-    public void printBoard(boolean[][] board){
-        StringBuilder sb = new StringBuilder();
-        ArrayList temp = new ArrayList<>();
-        for(int i= 0; i < size; i++){
-            sb = new StringBuilder();
-            for(int j = 0; j < size;j++){
-                if(board[i][j] == false){
-                    sb.append(".");
-                }else{
-                    sb.append("Q");
-                }
-            }
-            temp.add(sb.toString());
-        }
-        //System.out.println(temp);
-        ans.add(temp);
-    }
 }
