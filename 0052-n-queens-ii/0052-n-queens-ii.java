@@ -6,9 +6,8 @@ class Solution {
     public int totalNQueens(int n) {
         size = n;
         boolean[][] board = new boolean[n][n];
-        ans = new ArrayList<>();
         placeQueen(board,0);
-        return ans.size();
+        return count;
     }
     
   
@@ -42,7 +41,7 @@ class Solution {
     
     public void placeQueen(boolean[][] curBoard, int r){
         if(r == size){
-            printBoard(curBoard);
+            count++;
             return;
         }
         for(int col = 0; col < size; col++){
