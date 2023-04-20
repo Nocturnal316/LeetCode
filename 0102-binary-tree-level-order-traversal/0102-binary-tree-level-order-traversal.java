@@ -18,7 +18,7 @@ class Solution {
     public List<List<Integer>> levelOrder(TreeNode root) {
        
         int levels = getHeight(root);
-         ans = new ArrayList<>();
+        ans = new ArrayList<>();
         for(int i = 0; i < levels; i++){
             ans.add(new ArrayList<Integer>());
         }
@@ -30,8 +30,8 @@ class Solution {
     public void dfs(TreeNode root, int level){
         if(root == null) return;
         
-        List<Integer> t = ans.get(level);
-        t.add(root.val);
+         ans.get(level).add(root.val);
+        //t.add(root.val);
         
         dfs(root.left,level+1);
         dfs(root.right,level+1);
