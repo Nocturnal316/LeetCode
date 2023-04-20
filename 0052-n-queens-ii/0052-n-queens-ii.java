@@ -12,24 +12,24 @@ class Solution {
     
   
     public boolean isSafe(boolean[][] board, int row, int col) {
-      
-        //reason for not checking on right side of queen as we are not able to reaches 
-        //there beacuse we are moving backward whatever queen attack will be there it will be on left side
+        //because we are places queens from top row and down
+        //we only need to check upward raidous for previous queens
+        // at current place we are considering.
         
-        //on upper diagonal bothe col and row will decrease 
-        // upward diagonal on left side 
+        //check up 
         for(int i=0;i<row;i++){
             if(board[i][col]){
                 return false;
             }
         }
         int maxleft=Math.min(row,col);
+        //check left diagnol
         for(int i=1;i<=maxleft;i++){
             if(board[row-i][col-i]){
                 return false;
             }
         }
-        //lower diagonal which is on left side
+        //check right diagnal
         int maxright=Math.min(row,board.length-col-1);
         for(int i=1;i<=maxright;i++){
             if(board[row-i][col+i]){
