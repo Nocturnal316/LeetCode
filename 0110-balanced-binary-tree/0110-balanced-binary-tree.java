@@ -21,7 +21,7 @@ class Solution {
     }
     
     public int isBalancedNum(TreeNode root){
-        if(root == null) return -1;
+        if(root == null) return 0;
         
         return 1 + Math.max(isBalancedNum(root.left),isBalancedNum(root.right));
     }
