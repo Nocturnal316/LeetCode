@@ -20,8 +20,6 @@ class Solution {
             }
         }
         
-        System.out.println(sb1.toString());
-        System.out.println(sb2.toString());
         
         return sb1.toString().equals( sb2.toString());
     }
