@@ -16,7 +16,6 @@ class Solution {
         }
     }
     
-    
     class Trie{
         TrieNode root;
         
@@ -26,14 +25,12 @@ class Solution {
         
         public void insert(String s){
             TrieNode cur = root;
-            
             for(Character ch : s.toCharArray()){
                 if(!cur.children.containsKey(ch)){
                     cur.children.put(ch,new TrieNode(ch));
                 }
                 cur = cur.children.get(ch);
             }
-            
             cur.isWord = true;
         }
         
@@ -49,16 +46,14 @@ class Solution {
             return sb.toString();
         }
     }
+    
     public String longestCommonPrefix(String[] strs) {
-        
         Trie root = new Trie();
         
         for(String s : strs){
             root.insert(s);
         }
         
-    
-        
-        return    root.count(strs[0]);
+        return root.count(strs[0]);
     }
 }
