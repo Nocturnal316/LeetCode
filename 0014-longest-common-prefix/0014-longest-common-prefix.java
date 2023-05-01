@@ -39,7 +39,7 @@ class Solution {
             StringBuilder sb = new StringBuilder();
             
             for(Character ch : s.toCharArray()){
-                if(cur.children.size() != 1 || cur.isWord ) return sb.toString();
+                if(cur.children.size() != 1 || cur.isWord ) break;
                 cur = cur.children.get(ch);
                 sb.append(ch);
             }
