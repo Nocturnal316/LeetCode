@@ -27,7 +27,7 @@ class Solution {
             TrieNode cur = root;
             for(Character ch : s.toCharArray()){
                 if(!cur.children.containsKey(ch)){
-                    cur.children.put(ch,new TrieNode(ch));
+                    cur.children.put(ch,new TrieNode());
                 }
                 cur = cur.children.get(ch);
             }
