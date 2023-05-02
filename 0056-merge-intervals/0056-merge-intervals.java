@@ -10,8 +10,6 @@ class Solution {
         
         for(int i = 1; i < intervals.length;i++ ){
             int[] interval = intervals[i];
-            System.out.println(interval[0] +", "+ interval[1]);
-            
             if(curInterval[1] < interval[0]){
                 ans.add(curInterval);
                 curInterval = interval;
