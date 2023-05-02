@@ -15,7 +15,6 @@ class Solution {
                 newInterval[0] = Math.min(newInterval[0],interval[0]);
                 newInterval[1] = Math.max(newInterval[1],interval[1]);
             }
-       
         }
         ans.add(newInterval);
         return ans.toArray(new int[ans.size()][]);
