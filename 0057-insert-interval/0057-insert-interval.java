@@ -3,7 +3,6 @@ class Solution {
         List<int[]> ans = new ArrayList<>();
         
         for(int[] interval : intervals){
-            
             //if new interval comes before
             // newInterval end  < curInterval start
             if(newInterval[1] < interval[0]){
