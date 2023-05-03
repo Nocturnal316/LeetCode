@@ -27,8 +27,6 @@ class Solution {
             Point p = que.poll();
             ans.add(new int[]{p.x,p.y});
         }
-       
-        
         return ans.toArray(new int[ans.size()][]);
     }
 }
