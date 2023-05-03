@@ -17,7 +17,7 @@ class Solution {
     PriorityQueue<Integer> que = new PriorityQueue<>((a,b)->b-a);
     public int kthSmallest(TreeNode root, int k) {
         inOrder(root,k);
-        
+        System.out.println(que);
         return que.peek();
     }
     
