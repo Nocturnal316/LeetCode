@@ -22,7 +22,6 @@ class Solution {
             }
             common = path1.elementAt(i);
         }
-     
         return common;
     }
     
