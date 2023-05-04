@@ -21,8 +21,9 @@ class Solution {
                 // of the keeping same amount or takes previosu sub problem + 1;
                 // it might not have been solved yet so use Intermagx val
                 // increase by 1;
-                memo.put(amount, Math.min(memo.get(amount),
-                        memo.getOrDefault(remain,Integer.MAX_VALUE)+1));
+                int count = Math.min(memo.get(amount),
+                            memo.getOrDefault(remain,Integer.MAX_VALUE)+1);
+                memo.put(amount, count);
             }
            
         }
