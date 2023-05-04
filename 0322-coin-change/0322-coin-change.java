@@ -22,7 +22,7 @@ class Solution {
                 // it might not have been solved yet so use Intermagx val
                 // increase by 1;
                 int count = Math.min(memo.get(amount),
-                            memo.getOrDefault(remain,Integer.MAX_VALUE)+1);
+                            memo.get(remain)+1);
                 memo.put(amount, count);
             }
            
