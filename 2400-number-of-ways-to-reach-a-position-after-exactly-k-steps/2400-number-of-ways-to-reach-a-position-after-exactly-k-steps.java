@@ -11,6 +11,6 @@ class Solution {
         int right = numberOfWays(startPos + 1, endPos,  k - 1)%mod;
         
         memo.put(combo,(left+right)%mod);
-        return memo.get(combo);
+        return (left+right)%mod;
     }
 }
