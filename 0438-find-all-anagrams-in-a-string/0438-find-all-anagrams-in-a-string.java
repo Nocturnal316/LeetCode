@@ -10,8 +10,6 @@ class Solution {
             char[] sortedSub = temp.toCharArray();
             Arrays.sort(sortedSub);
             if(Arrays.equals(sortedP, sortedSub)) ans.add(left);
-          
-          
         }
         return ans;
     }
