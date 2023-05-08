@@ -4,7 +4,6 @@ class Solution {
     public class TrieNode{
         Boolean isWord;
         HashMap<Character,TrieNode> children;
-        TrieNode parent;
         String name;
         Boolean visited;
         int r, c;
@@ -12,7 +11,6 @@ class Solution {
         public TrieNode(){
             isWord = false;
             children = new HashMap<>();
-            parent = null;
             visited = false;
         }
         
@@ -21,7 +19,6 @@ class Solution {
             this.c =c;
             isWord = false;
             children = new HashMap<>();
-            parent = null;
             visited = false;
         }
         
@@ -44,8 +41,6 @@ class Solution {
     public boolean exist(char[][] board, String word) {
         int m = board.length;
         int n = board[0].length;
-        
-        System.out.println(m);
         
         root = new TrieNode();
         insertWord(word);
