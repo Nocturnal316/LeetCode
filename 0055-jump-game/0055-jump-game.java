@@ -5,17 +5,14 @@ class Solution {
         dp[nums.length-1] = true;
         
         for(int i = nums.length-2; i >= 0; i--){
-            int j =  i;
+            int farthest = Math.min(i+nums[i],nums.length-1);
             dp[i] = false;
-            while(j < (i+nums[i]) && j < dp.length){
-                ///if(nums[i] == 0) break;
-                j+=1;
+            for(int j = i; j <= farthest; j++){
                 if(dp[j] == true){
-                    dp[i] = true;
+                    dp[i]= true;
                     break;
-                } 
+                }
             }
-            
         }
         return dp[0];
     }
