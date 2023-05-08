@@ -7,7 +7,7 @@ class Solution {
         for(int i = nums.length-2; i >= 0; i--){
             int farthest = Math.min(i+nums[i],nums.length-1);
             dp[i] = false;
-            for(int j = i; j <= farthest; j++){
+            for(int j = i+1; j <= farthest; j++){
                 if(dp[j] == true){
                     dp[i]= true;
                     break;
