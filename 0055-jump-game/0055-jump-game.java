@@ -8,7 +8,7 @@ class Solution {
             int j =  i;
             dp[i] = false;
             while(j < (i+nums[i]) && j < dp.length){
-                if(nums[i] == 0) break;
+                ///if(nums[i] == 0) break;
                 j+=1;
                 if(dp[j] == true){
                     dp[i] = true;
