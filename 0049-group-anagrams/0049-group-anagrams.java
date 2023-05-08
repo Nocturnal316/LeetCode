@@ -12,9 +12,6 @@ class Solution {
             }
             map.get(sortedWord).add(string);
         }
-        
-        
-        
         return new ArrayList(map.values());
         
     }
