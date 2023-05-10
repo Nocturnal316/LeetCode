@@ -9,10 +9,9 @@ class Solution {
             return 0;
         }
         
-        
         if(memo.containsKey(pos)) return memo.get(pos);
         
-        int sum1= robHouse(pos + 1,nums);
+        int sum1 = robHouse(pos + 1,nums);
         int sum2 = robHouse(pos + 2,nums)+nums[pos];
         int max = Math.max(sum1,sum2);
         memo.put(pos,max);
