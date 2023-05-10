@@ -32,6 +32,9 @@ class Solution {
     
     public boolean dfsBreak(String s, TrieNode root, int pos){
         if(pos  == s.length() ) return true;
+        //if we seen this character used already return false;
+        // the case that root letter was already used
+        //aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa  -> a,aa,aaaaaa,aaa,aaaaa,
         if(indexSeen.contains(pos))return false;
         indexSeen.add(pos);
         TrieNode cur = root;
