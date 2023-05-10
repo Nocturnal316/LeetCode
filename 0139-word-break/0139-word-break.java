@@ -30,19 +30,15 @@ class Solution {
         return dfsBreak(s,root,0);
     }
     
-    public boolean dfsBreak(String s, TrieNode parent, int pos){
+    public boolean dfsBreak(String s, TrieNode root, int pos){
         if(pos  == s.length() ) return true;
-    
         if(indexSeen.contains(pos))return false;
         indexSeen.add(pos);
-        TrieNode cur = parent;
+        TrieNode cur = root;
         for(int i = pos; i < s.length();i++){
             Character c = s.charAt(i);
-           
             cur = cur.children.get(c);
-           
             if(cur == null) return false;
-         
             if(cur.isWord && dfsBreak(s,root,i+1)) return true;
         }
         return false;
