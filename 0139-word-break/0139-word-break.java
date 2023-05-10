@@ -43,10 +43,7 @@ class Solution {
             cur = cur.children.get(c);
            
             if(cur == null) return false;
-            System.out.println(c);
-            System.out.println(i);
-            System.out.println(cur.isWord);
-            System.out.println(cur.children);
+         
             if(cur.isWord && dfsBreak(s,root,i+1)) return true;
         }
         return false;
