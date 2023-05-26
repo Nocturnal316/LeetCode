@@ -5,7 +5,7 @@ class Solution {
         long hi = num;
         while(lo <= hi){
             long mid = lo + (hi -lo) /2;
-            if(mid*mid == num){
+            if(mid*mid== num){
                 return true;
             }
             else if(mid*mid > num ){
