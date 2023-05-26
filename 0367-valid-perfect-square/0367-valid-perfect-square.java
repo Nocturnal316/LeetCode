@@ -5,11 +5,10 @@ class Solution {
         long hi = num;
         while(lo <= hi){
             long mid = lo + (hi -lo) /2;
-            long sqrt = mid * mid;
-            if(sqrt == num){
+            if(mid*mid == num){
                 return true;
             }
-            else if(sqrt > num ){
+            else if(mid*mid > num ){
                 hi = mid - 1;
             }else{
                 lo = mid + 1;
