@@ -13,9 +13,7 @@ class Solution {
                 hi = mid - 1;
             }else{
                 lo = mid + 1;
-                
             }
-            if(lo > hi) return false;
         }
         return false;
     }
