@@ -8,6 +8,21 @@
  * }
  */
 class Solution {
+    
+      public TreeNode lca(TreeNode root, TreeNode node1, TreeNode node2) {
+        // WRITE YOUR BRILLIANT CODE HERE
+        if(root == null) return null;
+        
+        if(root.equals(node1) || root.equals(node2)) return root;
+        
+        TreeNode left = lca(root.left,node1,node2);
+        TreeNode right = lca(root.right,node1,node2);
+        if(left != null && right != null) return root;
+        if(left != null) return left;
+        if(right != null) return right;
+        return null;
+    }
+    
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         //could use regular list or deque
         //but arraydeque does not have elemntAt
