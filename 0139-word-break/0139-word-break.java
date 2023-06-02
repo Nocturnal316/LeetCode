@@ -58,8 +58,10 @@ class Solution {
             if(words.contains(s.substring(start,endP))){
                 // System.out.println("Start "+start);
                 // System.out.println("end "+ endP);
-                // System.out.println(s.substring(start,endP));
+                System.out.println(s.substring(start,endP));
                 ans = ans || dfs(s,words,endP,memo);
+                
+                
             
             }
         }
