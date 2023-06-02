@@ -61,7 +61,7 @@ class Solution {
                 System.out.println(s.substring(start,endP));
                 ans = ans || dfs(s,words,endP,memo);
                 
-                
+                if(ans) return true;
             
             }
         }
