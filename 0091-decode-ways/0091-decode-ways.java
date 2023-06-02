@@ -7,12 +7,15 @@ class Solution {
         if(start == s.length()) return 1;
         
         if(memo.containsKey(start)) return memo.get(start);
+        
         if(s.charAt(start) == '0') return 0;
         
         int ans = 0;
         
+        //process all single digits
         ans+= dfs(s,start+1,memo);
         
+        //proess 2 digits  at a time
         if(start+2 <= s.length() && Integer.parseInt(s.substring(start,start+2))<= 26){
             ans += dfs(s,start+2,memo);
         }
