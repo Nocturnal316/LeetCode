@@ -27,7 +27,7 @@ class Solution {
         for(String word : wordDict){
             insertWord(word);
         }
-        return dfsBreak(s,root,0);
+       return dfs(s,wordDict,0,new Boolean[s.length()]);
     }
     
     public boolean dfsBreak(String s, TrieNode root, int pos){
@@ -46,4 +46,23 @@ class Solution {
         }
         return false;
     }
+    
+    public  boolean dfs(String s,  List<String> words, int start,Boolean[] memo ){
+        if(start >= s.length()){
+            return true;
+        }
+        if (memo[start] != null) return memo[start];
+        boolean ans = false;
+        
+        for(int endP = start; endP <= s.length(); endP++){
+            if(words.contains(s.substring(start,endP))){
+                ans = dfs(s,words,endP,memo);
+                if(ans) return true;
+            }
+        }
+        
+        memo[start] = ans;
+        return ans;
+    }
+
 }
