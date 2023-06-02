@@ -54,10 +54,13 @@ class Solution {
         if (memo[start] != null) return memo[start];
         boolean ans = false;
         
-        for(int endP = start; endP <= s.length(); endP++){
+        for(int endP = start+1; endP <= s.length(); endP++){
             if(words.contains(s.substring(start,endP))){
-                ans = dfs(s,words,endP,memo);
-                if(ans) return true;
+                // System.out.println("Start "+start);
+                // System.out.println("end "+ endP);
+                // System.out.println(s.substring(start,endP));
+                ans = ans || dfs(s,words,endP,memo);
+            
             }
         }
         
