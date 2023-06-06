@@ -11,11 +11,11 @@ class Solution {
         seen.add(beginWord);
         Queue<String> que = new LinkedList<>();
         que.offer(beginWord);
-        int steps = 0;
+        int steps = 1;
       
         while(!que.isEmpty()){
             int size = que.size();
-            steps+=1;
+           
             for(int i = 0; i < size;i++){
                 String node = que.poll();
                 for(int pos = 0; pos < beginWord.length();pos++){
@@ -31,6 +31,7 @@ class Solution {
                     }
                 }
             } 
+              steps+=1;
         }
         return 0;
     }
