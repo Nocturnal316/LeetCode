@@ -24,7 +24,7 @@ class Solution {
                         sb.setCharAt(pos,c);
                         String newWord = sb.toString();
                         if(dict.contains(newWord) && !seen.contains(newWord)){
-                            if(newWord.equals(endWord)) return steps + 1;
+                            if(newWord.equals(endWord)) return steps +1 ;
                             seen.add(newWord);
                             que.offer(newWord);
                         }
