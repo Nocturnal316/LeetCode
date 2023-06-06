@@ -31,7 +31,7 @@ class Solution {
                     }
                 }
             } 
-              steps+=1;
+            steps+=1;
         }
         return 0;
     }
