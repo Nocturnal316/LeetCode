@@ -12,7 +12,6 @@ class Solution {
             res.add(new ArrayList<>(curSet));
         }
         
-     
         for(int i = start; i < nums.length; i++){
             curSet.add(nums[i]);
             dfs(nums,i+1,curSet);
