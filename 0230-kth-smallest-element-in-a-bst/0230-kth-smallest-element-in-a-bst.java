@@ -25,7 +25,6 @@ class Solution {
         if(root == null) return;
         
         inOrder(root.left,k);
-       
         que.add(root.val);
         if(que.size() > k) que.poll();
         inOrder(root.right,k);
