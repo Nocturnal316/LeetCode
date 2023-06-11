@@ -17,7 +17,7 @@ class Solution {
         ListNode c2 = l2;
         int remainder = 0;
         
-        while(c1 != null || c2 !=null || remainder == 1){
+        while(c1 != null || c2 !=null || remainder != 0){
             int sum = 0;
             if(c1 != null){
                 sum += c1.val;
