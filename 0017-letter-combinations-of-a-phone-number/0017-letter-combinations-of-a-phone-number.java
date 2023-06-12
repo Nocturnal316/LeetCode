@@ -18,7 +18,7 @@ class Solution {
     }
     
     public  void  dfs(String digits, int start, StringBuilder sb){
-        if(start == digits.length()){
+        if(start >= digits.length()){
             ans.add(sb.toString());
             return;
         }
