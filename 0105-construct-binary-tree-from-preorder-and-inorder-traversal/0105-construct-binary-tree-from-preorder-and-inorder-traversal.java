@@ -33,8 +33,6 @@ class Solution {
                 break;
             }
         }
-        
-        
         return root;
         
     }
