@@ -8,7 +8,7 @@ class Solution {
     }
     
     public void dfs(int[] nums, List<Integer> curPerm){
-        if(curPerm.size() >= nums.length){
+        if(curPerm.size() == nums.length){
             ans.add(new ArrayList<>(curPerm));
             return;
         }
