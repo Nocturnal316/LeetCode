@@ -1,6 +1,5 @@
 class Solution {
     public List<List<Integer>> ans = new ArrayList<>();
-    public HashSet<Integer> set = new HashSet<>();
     public List<List<Integer>> permute(int[] nums) {
         dfs(nums, new ArrayList<>());
         return ans;
