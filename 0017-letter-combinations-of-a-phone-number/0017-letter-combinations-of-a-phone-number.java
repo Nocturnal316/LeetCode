@@ -22,8 +22,6 @@ class Solution {
             ans.add(sb.toString());
             return;
         }
-         
-        if(start >= digits.length()) return;
         
         int num = digits.charAt(start) - '0' - 1;
         System.out.println(num);
