@@ -24,7 +24,7 @@ class Solution {
         }
         
         int num = digits.charAt(start) - '0' - 1;
-        System.out.println(num);
+        
         for(char c : dict[num]){
             sb.append(c);
             dfs(digits,start+1,sb);
