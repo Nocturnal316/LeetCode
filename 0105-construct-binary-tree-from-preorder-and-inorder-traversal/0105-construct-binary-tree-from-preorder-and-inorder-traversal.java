@@ -25,7 +25,7 @@ class Solution {
         }
         TreeNode root = new TreeNode(preorder[startIndx]);
         int num = preorder[startIndx];
-        for(int i = left; i < inorder.length;i++){
+        for(int i = left; i <= right;i++){
             if(inorder[i] == num){
                 startIndx+=1;
                 root.left = dfs(preorder,inorder,left,i-1);
