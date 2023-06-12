@@ -14,11 +14,9 @@ class Solution {
         }
         
         for(int i = 0; i < nums.length; i++){
-            if(set.contains(nums[i])) continue;
+            if(curPerm.contains(nums[i])) continue;
             curPerm.add(nums[i]);
-            set.add(nums[i]);
             dfs(nums,curPerm);
-            set.remove(nums[i]);
             curPerm.remove(curPerm.size()-1);
          
         }
