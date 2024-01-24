@@ -1,5 +1,5 @@
 class Solution:
-    def findDifference1(self, nums1: List[int], nums2: List[int]) -> List[List[int]]:
+    def findDifferenceFirst(self, nums1: List[int], nums2: List[int]) -> List[List[int]]:
         
         unique1 = set()
         unique2 = set()
