@@ -6,13 +6,16 @@ class Solution:
         size = len(nums)
         if size < 2 : return
         
-        last_non_zero = 0
-        last_non_zero = 0
-        for right in range(size):
-            if nums[right] != 0:
-                nums[last_non_zero], nums[right] = nums[right],         nums[last_non_zero]
-                last_non_zero += 1
+     
+        left = 0
+        for right in range(1, len(nums)):
+            # Move left to the first non-zero
+            while left < right and nums[left] != 0:
+                left += 1
 
+            # Swap if right isn't 0 and left is
+            if nums[right] != 0 and nums[left] == 0:
+                nums[left], nums[right] = nums[right], 0
             
                 
                 
