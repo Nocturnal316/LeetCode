@@ -1,12 +1,10 @@
 from queue import Queue
 
 class RecentCounter:
-    recentCalls = None
     
     def __init__(self):
         self.recentCalls = Queue()
 
-        
     def ping(self, t: int) -> int:
         self.recentCalls.put(t)
         while(self.recentCalls.queue[0] < t - 3000):
