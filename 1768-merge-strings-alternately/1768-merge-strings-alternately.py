@@ -1,5 +1,5 @@
 class Solution:
-    def mergeAlternately2(self, word1: str, word2: str) -> str:
+    def mergeAlternately(self, word1: str, word2: str) -> str:
         
         maxLen = len(word1)+len(word2)
         mergedStr = ''
@@ -16,7 +16,7 @@ class Solution:
                 word2  = word2[1:]
         return mergedStr
     
-    def mergeAlternately(self,word1: str, word2: str) -> str:
+    def mergeAlternately2(self,word1: str, word2: str) -> str:
         merged_str = ''
         for char1, char2 in zip(word1, word2):
             merged_str += char1 + char2
